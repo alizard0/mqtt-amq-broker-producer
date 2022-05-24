@@ -21,6 +21,7 @@ public class Application {
     while(true) {
       Thread.sleep(2000);
       publishMessage(connection, TOPIC_NAME, "ping");
+      System.out.println("Message published!");
     }
 
   }
