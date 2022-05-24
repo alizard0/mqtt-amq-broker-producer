@@ -3,7 +3,6 @@ package com.alizard0;
 import org.fusesource.mqtt.client.BlockingConnection;
 import org.fusesource.mqtt.client.MQTT;
 import org.fusesource.mqtt.client.QoS;
-import org.fusesource.mqtt.client.Topic;
 
 public class Application {
 
@@ -11,11 +10,6 @@ public class Application {
 
   public static void main(final String[] args) throws Exception {
     BlockingConnection connection = connect();
-
-    Topic[] topics = {
-            new Topic(TOPIC_NAME, QoS.AT_LEAST_ONCE)
-    };
-    connection.subscribe(topics);
 
     // Publish Messages
     while(true) {
